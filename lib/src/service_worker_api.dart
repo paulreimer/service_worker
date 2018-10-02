@@ -998,6 +998,8 @@ class Response extends Body {
   // Masked type: facade.Response
   Response._(delegate) : super._(delegate);
 
+  factory Response(dynamic body) => new Response._(facade.Response(body));
+
   factory Response.redirect(String url, [int status]) =>
       new Response._(facade.Response.redirect(url, status));
 
